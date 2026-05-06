@@ -1,5 +1,4 @@
 :root {
-  /* Variáveis consistentes */
   --header-link-height: 60px;
   --logo-margin-right: 51px;
   --item-spacing: 30px;
@@ -10,7 +9,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
 }
 
 .header {
@@ -27,6 +26,7 @@ body {
   width: 100%;
   max-width: 1200px;
   padding: 0 49px 0 29px;
+  justify-content: space-between; /* logo à esquerda, menu à direita */
 }
 
 .logo-link {
@@ -43,14 +43,15 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-.nav__item {
-  margin-left: var(--item-spacing);
+  gap: var(--item-spacing);
 }
 
 .nav__item:first-child {
   margin-left: 0;
+}
+
+.nav__item:last-child {
+  margin-right: 0;
 }
 
 .nav__link {
@@ -64,6 +65,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0;
+  transition: color 0.3s ease;
 }
 
 .nav__link:hover {
@@ -79,7 +81,7 @@ body {
   content: '';
   position: absolute;
   height: 4px;
-  width: 37px;
+  width: 100%;
   background: var(--blue-color);
   border-radius: 8px;
   bottom: 0;
