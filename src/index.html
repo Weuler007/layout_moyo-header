@@ -10,10 +10,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <link
-      rel="stylesheet"
-      href="style.css"
-    />
+
+    <!-- Fonte Roboto 500 (sem aspas no CSS depois) -->
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com"
@@ -27,11 +25,17 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
     <title>Moyo Header</title>
   </head>
   <body>
     <header class="header">
       <div class="container">
+        <!-- Logo como link -->
         <a
           href="#"
           class="logo-link"
@@ -42,7 +46,12 @@
             class="logo"
           />
         </a>
-        <nav class="nav">
+
+        <!-- Navegação principal -->
+        <nav
+          class="nav"
+          aria-label="Main navigation"
+        >
           <ul class="nav__list">
             <li class="nav__item">
               <a
