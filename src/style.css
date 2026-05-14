@@ -1,7 +1,7 @@
 :root {
   --header-link-height: 60px;
-  --logo-margin-right: 51px;
-  --item-spacing: 30px;
+  --logo-margin-right: 50px;
+  --item-spacing: 32px;
   --blue-color: #00acdc;
 }
 
@@ -12,7 +12,6 @@ body {
 }
 
 .header {
-  height: var(--header-link-height); /* altura fixa */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +24,7 @@ body {
   align-items: center;
   width: 100%;
   max-width: 1024px;
-  padding: 0 49px 0 29px; /* igual ao Figma */
+  padding: 0 49px 0 29px;
   justify-content: space-between;
 }
 
@@ -53,19 +52,15 @@ body {
   margin-left: 0;
 }
 
-.nav__item:last-child {
-  margin-right: 0;
-}
-
 .nav__link {
+  display: flex;
+  align-items: center;
+  height: var(--header-link-height);
   text-decoration: none;
   color: #000;
   text-transform: uppercase;
   font-size: 11px;
   font-weight: 500;
-  line-height: var(--header-link-height); /* centraliza verticalmente */
-  display: inline-block; /* largura proporcional ao texto */
-  padding: 0;
   transition: color 0.3s ease;
 }
 
@@ -81,11 +76,10 @@ body {
 .nav__link.is-active::after {
   content: '';
   position: absolute;
-  height: 4px;
-  width: 100%; /* underline proporcional ao texto */
+  height: 3px;
+  width: 100%;
   background: var(--blue-color);
   border-radius: 8px;
   bottom: 0;
-  left: 0; /* alinhado ao início do texto */
+  left: 0;
 }
-
