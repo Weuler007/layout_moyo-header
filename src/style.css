@@ -1,7 +1,7 @@
 :root {
   --header-link-height: 60px;
-  --logo-margin-right: 51px; /* espaço entre logo e nav */
-  --item-spacing: 30px;      /* espaçamento entre links */
+  --logo-margin-right: 51px;
+  --item-spacing: 30px;
   --blue-color: #00acdc;
 }
 
@@ -23,8 +23,7 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 1024px;
-  padding: 0 49px 0 50px; /* 50px da borda esquerda, 49px da direita */
+  padding: 0 49px 0 50px; /* 50px da esquerda, 49px da direita */
   justify-content: space-between;
 }
 
