@@ -71,8 +71,6 @@ body {
 
 .nav__link:hover {
   color: var(--blue-color);
-
-
 }
 
 .nav__link.is-active {
@@ -90,12 +88,12 @@ body {
   bottom: 0;
   left: 0; /* alinhado ao início do texto */
 }
-.nav__laptop-link {
-  color: #00acdc;
+
+.nav__laptop--link {
+  color: var(--blue-color);
   text-decoration: none;
   font-size: 11px;
   text-transform: uppercase;
   font-weight: 500;
   line-height: var(--header-link-height);
-
 }
