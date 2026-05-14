@@ -1,7 +1,7 @@
 :root {
   --header-link-height: 60px;
-  --logo-margin-right: 50px;
-  --item-spacing: 30px;
+  --logo-margin-right: 51px; /* espaço entre logo e nav */
+  --item-spacing: 30px;      /* espaçamento entre links */
   --blue-color: #00acdc;
 }
 
@@ -15,7 +15,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100%; /* ocupa toda a largura */
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -24,7 +24,7 @@ body {
   align-items: center;
   width: 100%;
   max-width: 1024px;
-  padding: 0 49px 0 29px;
+  padding: 0 49px 0 50px; /* 50px da borda esquerda, 49px da direita */
   justify-content: space-between;
 }
 
@@ -76,7 +76,7 @@ body {
 .nav__link.is-active::after {
   content: '';
   position: absolute;
-  height: 2px;
+  height: 2px; /* conforme Figma */
   width: 100%;
   background: var(--blue-color);
   border-radius: 8px;
