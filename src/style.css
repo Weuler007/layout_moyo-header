@@ -1,7 +1,7 @@
 :root {
   --header-link-height: 60px;
-  --logo-margin-right: 51px;
-  --item-spacing: 30px;
+  --logo-margin-right: 15px;
+  --item-spacing: 25px;
   --blue-color: #00acdc;
 }
 
@@ -13,8 +13,9 @@ body {
 
 .header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
   width: 100%;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -22,64 +23,76 @@ body {
 .container {
   display: flex;
   align-items: center;
-  width: 100%;
-  max-width: 1024px;
-  padding: 0 49px 0 50px;
   justify-content: space-between;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 50px;
 }
 
-.logo-link {
-  margin-right: var(--logo-margin-right);
+.header__logo-link {
+  margin: 0 0 -5px;
 }
 
-.logo {
+.header__logo {
+  width: 40px;
   height: 40px;
+  margin-right: var(--logo-margin-right);
 }
 
 .nav__list {
   display: flex;
+  gap: var(--item-spacing); /* espaçamento uniforme */
   align-items: center;
-  list-style: none;
+
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .nav__item {
-  margin-left: var(--item-spacing);
-}
-
-.nav__item:first-child {
-  margin-left: 0;
+  margin: 0;
 }
 
 .nav__link {
+  position: relative;
+
   display: flex;
   align-items: center;
+
   height: var(--header-link-height);
-  text-decoration: none;
-  color: #000;
-  text-transform: uppercase;
+  margin: 0 0 0 -5px;
+  padding: 0;
+
   font-size: 12px;
   font-weight: 500;
-  transition: color 0.3s ease;
+  color: #000; /* cor padrão */
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav__link:hover {
+  color: var(--blue-color); /* hover azul */
+}
+
+/* 🔹 Link ativo */
+.nav__link--active {
   color: var(--blue-color);
 }
 
-.nav__link.is-active {
-  position: relative;
-  color: var(--blue-color);
-}
-
-.nav__link.is-active::after {
+.nav__link--active::after {
   content: '';
+
   position: absolute;
-  height: 2px;
-  width: 100%;
-  background: var(--blue-color);
-  border-radius: 8px;
   bottom: 0;
   left: 0;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 8px;
+
+  background: var(--blue-color);
 }
