@@ -16,10 +16,11 @@ const config = {
   onBeforeScript: 'puppet/onBefore.js',
   onReadyScript: 'puppet/onReady.js',
   engine: 'puppeteer', // ✅ força uso do Puppeteer
-  engineOptions: {
-
-    headless: true,
-  },
+  engine: 'puppeteer',
+engineOptions: {
+  args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  headless: true,
+},
   viewports: [
     { name: '1024px', width: 1024, height: 768 },
     { name: '1200px', width: 1200, height: 768 },
